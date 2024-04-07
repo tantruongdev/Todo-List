@@ -1,0 +1,125 @@
+.todos__container {
+  max-width: 600px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.todos__input {
+  margin-bottom: 16px;
+}
+
+.todos__input-field {
+  padding: 8px;
+  font-size: 16px;
+  margin-right: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.todos__input-btn {
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.todos__input-btn:hover {
+  background-color: #0056b3;
+}
+
+.todos__list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.todos__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.todos__content {
+  display: flex;
+  align-items: center;
+}
+
+.todos__item-text {
+  display: inline-block;
+  margin-right: 8px;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.todos__item-text--completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.todos__manipulate {
+  display: flex;
+  align-items: center;
+}
+
+.todos__item-btn {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.todos__item-btn:hover {
+  background-color: #ccc;
+}
+
+.todos__item-btn--delete {
+  margin-left: 8px;
+  color: #ff0000;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .todos__container {
+    padding: 12px;
+  }
+
+  .todos__input {
+    margin-bottom: 12px;
+  }
+
+  .todos__input-field {
+    font-size: 14px;
+  }
+
+  .todos__input-btn {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  .todos__item {
+    flex-direction: column;
+    /* Change flex-direction to column for smaller screens */
+    align-items: flex-start;
+    /* Align items to the start */
+    margin-bottom: 12px;
+    /* Increase margin for better spacing */
+  }
+
+  .todos__manipulate {
+    margin-top: 8px;
+    /* Add margin to move buttons away from text */
+  }
+
+  .todos__item-btn {
+    padding: 8px 12px;
+    font-size: 14px;
+    margin-right: 8px;
+    /* Add margin between buttons */
+  }
+}
