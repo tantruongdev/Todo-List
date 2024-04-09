@@ -1,6 +1,6 @@
-import React, { useState, useRef } from "react";
-import "./Todos.css";
-
+import { useState, useRef } from "react";
+// import "./Todos.css";
+import "./Todos.scss";
 function Todos() {
   const [todo, setTodo] = useState("");
   const [todos, setTodos] = useState([]);
@@ -21,6 +21,12 @@ function Todos() {
     inputRef.current.focus();
   };
 
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      handleSubmit();
+    }
+  };
+
   const handleCompleted = (index) => {
     setTodos((prevTodos) => {
       const newTodos = [...prevTodos];
@@ -34,12 +40,6 @@ function Todos() {
 
   const handleDelete = (index) => {
     setTodos((prevTodos) => prevTodos.filter((_, i) => i !== index));
-  };
-
-  const handleKeyDown = (e) => {
-    if (e.key === "Enter") {
-      handleSubmit();
-    }
   };
 
   return (

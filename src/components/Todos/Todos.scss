@@ -1,0 +1,116 @@
+.todos__container {
+  max-width: 720px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+
+  .todos__input {
+    margin-bottom: 16px;
+
+    &-field {
+      padding: 8px;
+      font-size: 16px;
+      margin-right: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    &-btn {
+      padding: 8px 16px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  }
+
+  .todos__list {
+    list-style-type: none;
+    padding: 0;
+
+    .todos__item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 8px;
+
+      .todos__content {
+        display: flex;
+        align-items: center;
+
+        .todos__item-text {
+          display: inline-block;
+          margin-right: 8px;
+          word-wrap: break-word;
+          word-break: break-word;
+
+          &--completed {
+            text-decoration: line-through;
+            color: #888;
+          }
+        }
+      }
+
+      .todos__manipulate {
+        display: flex;
+        align-items: center;
+
+        .todos__item-btn {
+          padding: 8px 12px;
+          font-size: 14px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: #ccc;
+          }
+
+          &--delete {
+            margin-left: 8px;
+            color: #ff0000;
+          }
+        }
+      }
+    }
+  }
+
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    padding: 12px;
+
+    .todos__input {
+      margin-bottom: 12px;
+
+      &-field {
+        font-size: 14px;
+      }
+
+      &-btn {
+        padding: 6px 12px;
+        font-size: 14px;
+      }
+    }
+
+    .todos__item {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 12px;
+    }
+
+    .todos__manipulate {
+      margin-top: 8px;
+    }
+
+    .todos__item-btn {
+      margin-right: 8px;
+    }
+  }
+}
